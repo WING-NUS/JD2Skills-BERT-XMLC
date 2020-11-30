@@ -1,7 +1,21 @@
 # JD2Skills-BERT-XMLC
 Code and Dataset for the Bhola et al. (2020) Retrieving Skills from Job Descriptions: A Language Model Based Extreme Multi-label Classification Framework
 
-This dataset includes the fields:
+## Dataset
+
+The dataset is collected from Singaporean government website, mycareersfuture.sg consisting of over 20, 000 richly-structured job posts. The detailed statistics of the dataset are shown below:
+
+Mycareersfuture.sg Dataset |  Stats
+--- | ---
+Number of job posts | 20,298
+Number of distinct skills | 2,548
+Number of skills with 20 or more mentions | 1,209
+Average skill tags per job post | 19.98
+Average token count per job post | 162.27
+Maximum token count in a job post | 1,127
+
+
+This dataset includes the following fields:
 
 1. company_name
 2. job_title
@@ -19,3 +33,7 @@ This dataset includes the fields:
 14. expiry_date
 15. no_of_applications
 16. job_id
+
+
+## BERT-XMLC model
+The proposed model constitutes a pre-trained BERT based text encoder utilizing WordPiece embedding. The encoded textual representation is passed into bottleneck layer. This layer alleviates overfitting by (significantly) limiting the number of trainable parameters. The activations are passed through fully connected layer, finally producing probability scores using sigmoid activation function.
