@@ -38,4 +38,4 @@ This dataset includes the following fields:
 ## BERT-XMLC model
 The proposed model constitutes a pre-trained BERT based text encoder utilizing WordPiece embedding. The encoded textual representation is passed into bottleneck layer. This layer alleviates overfitting by (significantly) limiting the number of trainable parameters. The activations are passed through fully connected layer, finally producing probability scores using sigmoid activation function.
 
-![alt text](https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/doc/BERT-XMLC.png)
+<img align="center" width="100" height="100" src="https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/doc/BERT-XMLC.png">
