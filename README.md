@@ -41,3 +41,17 @@ The proposed model constitutes a pre-trained BERT based text encoder utilizing W
 <p align="center">
   <img width="460"  src="https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/doc/BERT-XMLC.png">
 </p>
+
+## Results
+
+<p align="center">
+  <img width="460"  src="https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/doc/Screenshot%202020-11-30%20163740.png">
+</p>
+
+<p align="center">
+  <img width="460"  src="https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/doc/Screenshot%202020-11-30%20163812.png">
+</p>
+
+<p align="center">
+  <img width="460"  src="https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/doc/Screenshot%202020-11-30%20163845.png">
+</p>
