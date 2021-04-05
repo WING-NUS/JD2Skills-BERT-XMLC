@@ -186,7 +186,7 @@ def main():
     parser.add_argument("--do_test", action='store_true')
     parser.add_argument("--save_best", action='store_true')
     parser.add_argument("--do_lower_case", action='store_true')
-    parser.add_argument('--data_name', default='kaggle', type=str)
+    parser.add_argument('--data_name', default='job_dataset', type=str)
     parser.add_argument("--epochs", default=10, type=int)
     parser.add_argument("--resume_path", default='', type=str)
     parser.add_argument("--mode", default='min', type=str)
