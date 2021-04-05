@@ -1,6 +1,8 @@
 # JD2Skills-BERT-XMLC
 Code and Dataset for the Bhola et al. (2020) Retrieving Skills from Job Descriptions: A Language Model Based Extreme Multi-label Classification Framework
 
+**Note** Default model weights and dataset will be uploaded soon
+
 ## Dataset
 
 The dataset is collected from Singaporean government website, mycareersfuture.sg consisting of over 20, 000 richly-structured job posts. The detailed statistics of the dataset are shown below:
