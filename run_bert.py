@@ -21,7 +21,6 @@ from pytorch_transformers import AdamW, WarmupLinearSchedule
 from torch.utils.data import RandomSampler, SequentialSampler
 from torch.utils.tensorboard import SummaryWriter
 
-# os.environ['CUDA_VISIBLE_DEVICES'] = '-1' # [REMOVE]
 warnings.filterwarnings("ignore")
 
 def run_train(args):
