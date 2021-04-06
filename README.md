@@ -49,10 +49,10 @@ The proposed model constitutes a pre-trained BERT based text encoder utilizing W
 2. Transfer dataset files from ```dataset``` folder (in google drive) to ```pybert/dataset``` folder
 
 **Training** <br> 
-``` python run_bert.py --train --data_name job_dataset ```
+``` python run_bert.py --do_train --data_name job_dataset ```
 
 **Testing** <br> 
-``` python run_bert.py --test ```
+``` python run_bert.py --do_test ```
 
 **Note:** Configurations for training, validation and testing of model are provided in ```pybert/configs/basic_config.py```
 
