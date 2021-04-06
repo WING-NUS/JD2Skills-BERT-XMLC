@@ -2,7 +2,7 @@
 ### [Dataset](https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/data/mycareersfuture.tar.gz) | [Paper](https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/doc/COLING_2020.pdf) | [PPT](https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/doc/COLING2020.pptx) | [Presentation](https://youtu.be/fqHvYIEh-Q8)
 Code and Dataset for the Bhola et al. (2020) Retrieving Skills from Job Descriptions: A Language Model Based Extreme Multi-label Classification Framework
 
-Default model weights and dataset are provided in the [link](https://drive.google.com/drive/folders/1e2IwSbF5DTk-3OQITBxlYOQGRISL2DBV?usp=sharing)
+Default model weights and dataset are available in the [link](https://drive.google.com/drive/folders/1e2IwSbF5DTk-3OQITBxlYOQGRISL2DBV?usp=sharing)
 ## Dataset
 
 The dataset is collected from Singaporean government website, mycareersfuture.sg consisting of over 20, 000 richly-structured job posts. The detailed statistics of the dataset are shown below:
