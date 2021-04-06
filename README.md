@@ -1,8 +1,7 @@
 # JD2Skills-BERT-XMLC
 Code and Dataset for the Bhola et al. (2020) Retrieving Skills from Job Descriptions: A Language Model Based Extreme Multi-label Classification Framework
 
-****Note: Default model weights and dataset will be uploaded soon**
-
+Default model weights and dataset are provided in the [link](https://drive.google.com/drive/folders/1e2IwSbF5DTk-3OQITBxlYOQGRISL2DBV?usp=sharing)
 ## Dataset
 
 The dataset is collected from Singaporean government website, mycareersfuture.sg consisting of over 20, 000 richly-structured job posts. The detailed statistics of the dataset are shown below:
@@ -43,6 +42,18 @@ The proposed model constitutes a pre-trained BERT based text encoder utilizing W
 <p align="center">
   <img width="460"  src="https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/doc/BERT-XMLC.png">
 </p>
+
+## Model setup
+1. Transfer all files from ```checkpoint``` folder (in google drive) to ```pybert/pretrain/bert/bert-uncased``` folder
+2. Transfer dataset files from ```dataset``` folder (in google drive) to ```pybert/dataset``` folder
+
+**Training** <br> 
+``` python run_bert.py --do_train --data_name job_dataset ```
+
+**Testing** <br> 
+``` python run_bert.py --do_test ```
+
+**Note:** Configurations for training, validation and testing of model are provided in ```pybert/configs/basic_config.py```
 
 ## Results
 
