@@ -178,6 +178,8 @@ class Recall(Metric):
             print("Recall@{}: {}".format(k,result[idx]))
             idx += 1
 
+# implicit metrics are evaluated based on the top-20 predections 
+
 class Implicit_Metrics(Metric):
     skill_list = []
     i2w = {}
