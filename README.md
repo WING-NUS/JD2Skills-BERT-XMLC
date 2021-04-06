@@ -72,7 +72,7 @@ Experimental results on skill prediction task are shown below:
   <img width="600"  src="https://github.com/WING-NUS/JD2Skills-BERT-XMLC/blob/main/doc/Screenshot%202020-11-30%20163845.png">
 </p>
 
-**Note:** model has been further finetuned
+**Note:** Model has been further finetuned
 
 ## Bibtex
 ```
