@@ -182,8 +182,8 @@ def main():
     parser = ArgumentParser()
     parser.add_argument("--arch", default='bert', type=str)
     parser.add_argument("--do_data", action='store_true')
-    parser.add_argument("--do_train", action='store_true')
-    parser.add_argument("--do_test", action='store_true')
+    parser.add_argument("--train", action='store_true')
+    parser.add_argument("--test", action='store_true')
     parser.add_argument("--save_best", action='store_true')
     parser.add_argument("--do_lower_case", action='store_true')
     parser.add_argument('--data_name', default='job_dataset', type=str)
@@ -228,10 +228,10 @@ def main():
         data.train_val_split(X=sentences, y=targets, shuffle=False, stratify=False,
                              valid_size=args.valid_size, data_dir=config['data_dir'],
                              data_name=args.data_name)
-    if args.do_train:
+    if args.train:
         run_train(args)
 
-    if args.do_test:
+    if args.test:
         run_test(args)
 
 

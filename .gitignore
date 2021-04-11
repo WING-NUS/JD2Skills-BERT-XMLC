@@ -10,8 +10,8 @@ __pycache__/
 pybert/dataset/
 
 # Checkpoints
-pybert/output/
-pybert/pretrain/
+# pybert/output/checkpoints/bert/
+# pybert/pretrain/
 
 # Tensorboard runs
 runs/
