@@ -45,14 +45,16 @@ The proposed model constitutes a pre-trained BERT based text encoder utilizing W
 </p>
 
 ## Model setup
+Run ```python pybert/model_setup/download_default_files.py```. (If you're reciving "ImportError", run ```export PYTHONPATH='.'``` in the base directory)
+
 1. Transfer all files from ```checkpoint``` folder (in google drive) to ```pybert/pretrain/bert/bert-uncased``` folder
 2. Transfer dataset files from ```dataset``` folder (in google drive) to ```pybert/dataset``` folder
 
 **Training** <br> 
-``` python run_bert.py --do_train --data_name job_dataset ```
+``` python run_bert.py --train --data_name job_dataset ```
 
 **Testing** <br> 
-``` python run_bert.py --do_test ```
+``` python run_bert.py --test --data_name job_dataset```
 
 **Note:** Configurations for training, validation and testing of model are provided in ```pybert/configs/basic_config.py```
 
