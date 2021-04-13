@@ -45,7 +45,7 @@ The proposed model constitutes a pre-trained BERT based text encoder utilizing W
 </p>
 
 ## Model setup
-* Run ```python pybert/model_setup/download_default_files.py```. (If you're reciving "ImportError", run ```export PYTHONPATH='.'``` in the base directory)
+* Run ```/setup.sh```
 
 **Or**
 
