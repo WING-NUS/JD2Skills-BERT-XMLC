@@ -254,7 +254,9 @@ class EIM(Implicit_Metrics):
         predicted_labels = self.job_labels(sorted_prediction_indices)
         explicit_skills = self.present_skills(job_description, self.skill_list)
 
-        return len(self.intersection(predicted_labels, explicit_skills)) / (len(self.intersection(job_labels, explicit_skills)) + self.epsilon)
+        if len(self.intersection(job_labels, explicit_skills))==0:
+            return 1
+        return len(self.intersection(predicted_labels, explicit_skills)) / (len(self.intersection(job_labels, explicit_skills)))
 
 
     def reset(self):

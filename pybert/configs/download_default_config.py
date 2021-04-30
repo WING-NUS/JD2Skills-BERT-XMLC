@@ -8,9 +8,9 @@ config = {
     'model_checkpoint': '1mhYxj7DEDgGeYWxed_sgYtJyZQPEuHSo',
     'bert_vocab': '1i8UiRVptfFWLYoBf4zTyJlVgk-ZP15U0',
 
-    'sample_test_set': '1nMDmxqEhRBKBJKpbK33GVHq_TSGCs7FX', 
+    'sample_test_set': '1DKUelkOdSCYGJ80lfi89ASFm5Ye1W_QH', 
     'sample_train_set': '1jwrWYnAuUn2d-ljAJ6vbpwMCy_sYEMDu',
-    'sample_valid_set': '1YbrxClsy00RP_pkkjs4xL33llS82R3Hn'
+    'sample_valid_set': '1c8UZjiilx75lMhEYhRk1f7eFgyfO4pAV'
 }
 
 file_path = {
