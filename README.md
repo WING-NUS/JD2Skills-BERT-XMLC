@@ -58,7 +58,8 @@ The proposed model constitutes a pre-trained BERT based text encoder utilizing W
 **Testing** <br> 
 ``` python run_bert.py --test --data_name job_dataset```
 
-**Note:** Configurations for training, validation and testing of model are provided in ```pybert/configs/basic_config.py```
+**Note:** Configurations for training, validation and testing of model are provided in ```pybert/configs/basic_config.py``` <br>
+Additionally, ```pybert/model_setup/CAB_dataset_script.py``` is provided to implement CAB
 
 ## Results
 
