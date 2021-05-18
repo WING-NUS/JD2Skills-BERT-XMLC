@@ -109,7 +109,7 @@ def parse_idx(idx,max_len):
         idx_lst = [x for x in range(max_len)]
     elif re.match('[0-9]+-[0-9]+',idx):
         initial_idx = re.search('(.+?)-[0-9]+',idx).group(1)
-        final_idx = re.search('[0-9]+-(.+?)',idx).group(1)
+        final_idx = re.search('[0-9]+-(.+?)$',idx).group(1)
         idx_lst = [x for x in range(max(0,int(initial_idx)), min(max_len,int(final_idx)+1))]
     elif re.match('[0-9]+',idx):
         if int(idx)<0 or int(idx)>max_len-1:

@@ -64,6 +64,7 @@ class Predictor(object):
 
     def labels(self,logits,idx):
         idx = parse_idx(idx,logits.shape[0])
-        logits = logits[idx]
-        for i in range(logits.shape[0]):
+        print("-"*89)
+        print("printing labels")
+        for i in idx:
             self.print_labels(logits,i)
