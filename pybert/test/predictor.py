@@ -1,7 +1,7 @@
 #encoding:utf-8
 import torch
 import numpy as np
-from ..common.tools import model_device
+from ..common.tools import model_device, parse_idx
 from ..callback.progressbar import ProgressBar
 from pybert.train.metrics import MRR, Recall, NDCG, EIM, REIM, RIIM
 from pybert.configs.basic_config import config
@@ -49,3 +49,21 @@ class Predictor(object):
         if 'cuda' in str(self.device):
             torch.cuda.empty_cache()
         return all_logits
+
+    def job_labels(self, label_indices):
+        labels = []
+        for idx in label_indices:
+            labels.append(self.i2l[idx])
+        return labels
+
+    def print_labels(self,logits,idx):
+        sorted_prediction_indices = np.flip(np.argsort(logits[idx]))
+        sorted_prediction_indices = sorted_prediction_indices[:20]
+        predicted_labels = self.job_labels(sorted_prediction_indices)
+        print("prediction {}: {}".format(idx,predicted_labels))
+
+    def labels(self,logits,idx):
+        idx = parse_idx(idx,logits.shape[0])
+        logits = logits[idx]
+        for i in range(logits.shape[0]):
+            self.print_labels(logits,i)

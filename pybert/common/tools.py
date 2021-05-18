@@ -1,4 +1,5 @@
 import os
+import re
 import random
 import torch
 import numpy as np
@@ -101,6 +102,23 @@ def model_device(n_gpu, model):
         os.environ['CUDA_VISIBLE_DEVICES'] = str(device_ids[0])
     model = model.to(device)
     return model, device
+
+def parse_idx(idx,max_len):
+    idx_lst=[]
+    if idx=="all":
+        idx_lst = [x for x in range(max_len)]
+    elif re.match('[0-9]+-[0-9]+',idx):
+        initial_idx = re.search('(.+?)-[0-9]+',idx).group(1)
+        final_idx = re.search('[0-9]+-(.+?)',idx).group(1)
+        idx_lst = [x for x in range(max(0,int(initial_idx)), min(max_len,int(final_idx)+1))]
+    elif re.match('[0-9]+',idx):
+        if int(idx)<0 or int(idx)>max_len-1:
+            raise Exception('"predict_idx" is out of range ')
+        else:
+            idx_lst = [int(idx)]
+    else:
+        raise Exception('"predict_idx" is out of range ')
+    return idx_lst
 
 def restore_checkpoint(resume_path, model=None):
     '''

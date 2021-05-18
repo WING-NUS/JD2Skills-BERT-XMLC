@@ -162,7 +162,11 @@ def run_test(args):
     label_list = processor.get_labels(label_path=config['data_label_path'])
     
     idx2label = {i: label for i, label in enumerate(label_list)}
-    model = BertForMultiLable.from_pretrained(config['bert_model_dir'], num_labels=len(label_list))
+    if args.test_path:
+        args.test_path = Path(args.test_path)
+        model = BertForMultiLable.from_pretrained(args.test_path, num_labels=len(label_list))
+    else:
+        model = BertForMultiLable.from_pretrained(config['bert_model_dir'], num_labels=len(label_list))
     for p in model.bert.parameters():
         p.require_grad = False
 
@@ -176,6 +180,8 @@ def run_test(args):
                           i2w = idx2word,
                           i2l = idx2label)
     result = predictor.predict(data=test_dataloader)
+    if args.predict_labels:
+        predictor.labels(result,args.predict_idx)
 
 
 def main():
@@ -189,6 +195,7 @@ def main():
     parser.add_argument('--data_name', default='job_dataset', type=str)
     parser.add_argument("--epochs", default=10, type=int)
     parser.add_argument("--resume_path", default='', type=str)
+    parser.add_argument("--test_path", default='', type=str)
     parser.add_argument("--mode", default='min', type=str)
     parser.add_argument("--monitor", default='valid_loss', type=str)
     parser.add_argument("--valid_size", default=0.05, type=float)
@@ -209,6 +216,8 @@ def main():
     parser.add_argument('--seed', type=int, default=42)
     parser.add_argument('--fp16', action='store_true')
     parser.add_argument('--fp16_opt_level', type=str, default='O1')
+    parser.add_argument('--predict_labels', type=bool, default=False)
+    parser.add_argument('--predict_idx', type=str, default="0", help=' "idx" or "start-end" or "all" ')
 
     args = parser.parse_args()
     config['checkpoint_dir'] = config['checkpoint_dir'] / args.arch
