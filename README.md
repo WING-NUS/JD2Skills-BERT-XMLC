@@ -45,7 +45,7 @@ The proposed model constitutes a pre-trained BERT based text encoder utilizing W
 </p>
 
 ## Model setup
-* Run ```/setup.sh```
+* Run ```bash setup.sh```
 
 **Or**
 
