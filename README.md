@@ -61,6 +61,14 @@ The proposed model constitutes a pre-trained BERT based text encoder utilizing W
 **Note:** Configurations for training, validation and testing of model are provided in ```pybert/configs/basic_config.py``` <br>
 Additionally, ```pybert/model_setup/CAB_dataset_script.py``` is provided to implement CAB
 
+**Docker image deployment** <br>
+To create a docker deployment: 
+* First download & setup all the datasets files and pre-trained model weights in the ```pybert``` dir
+* Run ``` docker build . ``` to create docker image
+* To start training with default config, run ``` docker run <docker_image_name> ```
+* For testing and further operations, execute commands in ```/bin/bash``` terminal in the container
+``` docker run -it <docker_image_name> /bin/bash ```
+
 ## Results
 
 Experimental results on skill prediction task are shown below:
